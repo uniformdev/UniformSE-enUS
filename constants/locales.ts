@@ -1,0 +1,1 @@
+export const LOCALE_ENGLISH_UNITED_STATES = 'en-US';

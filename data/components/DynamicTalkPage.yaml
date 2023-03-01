@@ -1,0 +1,34 @@
+id: DynamicTalkPage
+name: Dynamic Talk Page
+icon: shape-zigzag
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: Header
+    name: Header
+    allowedComponents:
+      - Header
+    inheritAllowedComponents: false
+  - id: Content
+    name: Content
+    allowedComponents:
+      - DynamicTalk
+      - HeroContentful
+    inheritAllowedComponents: false
+  - id: Footer
+    name: Footer
+    allowedComponents:
+      - Footer
+    inheritAllowedComponents: false
+defaults:
+  type: DynamicTalkPage
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: DynamicTalk
+canBeComposition: true
+created: '2023-01-30T22:39:24.604731+00:00'
+updated: '2023-01-31T19:13:05.977854+00:00'

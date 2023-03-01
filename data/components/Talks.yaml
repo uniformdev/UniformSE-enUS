@@ -1,0 +1,48 @@
+id: Talks
+name: Talks
+icon: layout-list
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: Header
+    name: Header
+    allowedComponents:
+      - Header
+    inheritAllowedComponents: false
+  - id: Content
+    name: Content
+    allowedComponents:
+      - DynamicTalkList
+      - SelectTalkList
+    inheritAllowedComponents: false
+  - id: Footer
+    name: Footer
+    allowedComponents:
+      - Footer
+    inheritAllowedComponents: false
+defaults:
+  type: talks
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: DynamicTalkList
+        parameters:
+          Entries:
+            type: contentfulQuery
+            value:
+              count: 30
+              sortBy: fields.title
+              source: default
+              sortOrder: asc
+              contentType: talk
+slugSettings:
+  unique: global
+  required: 'yes'
+  regularExpression: ^[^/\\#?-]([A-Za-z0-9\-\ ]+)
+  regularExpressionMessage: No forward slash in beginning of Slug
+canBeComposition: true
+created: '2023-01-30T19:38:05.81616+00:00'
+updated: '2023-02-02T20:37:54.28409+00:00'

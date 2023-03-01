@@ -1,0 +1,20 @@
+id: HeroKontent
+name: Hero Kontent
+icon: format-heading
+parameters:
+  - id: Entry
+    name: Kontent Entry
+    type: kontentEntry
+    helpText: ''
+    typeConfig:
+      source: default
+      required: true
+      allowedContentTypes:
+        hero:
+          id: hero
+          name: Hero
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-01-10T16:49:46.898914+00:00'
+updated: '2023-01-10T16:49:46.898914+00:00'
